@@ -1,4 +1,3 @@
-import { database } from '../../main';
 import { checkDatabaseReady, checkParams, getParamsCollection } from '../main';
 
 /* 
