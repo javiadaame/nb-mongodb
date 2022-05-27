@@ -3,17 +3,21 @@ const database = require('../../main')
 /* 
     Create collection in MongoDB database.
     @param name string - Collection name 
+    @return boolean - Success
 */
-function create(name) {
-    database.listCollections({ name: collection_name }).next((err, collinfo) => {
+exports("createCollection", (name) => {
+    database.listCollections({ name: name }).next((err, collinfo) => {
         if (collinfo) {
             console.log("[NB] Error: The collection already exists.")
+
+            return false
         } else {
-            database.createCollection(collection_name, (err, res) => {
+            database.createCollection(name, (err, res) => {
                 if (err) return console.log("[NB] Error: " + err)
 
-                console.log("[NB] The collection " + collection_name + " was created.")
+                console.log("[NB] The collection " + name + " was created.")
+                return true
             });
         }
     });
-}
+});

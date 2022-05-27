@@ -12,10 +12,3 @@ mongodb.MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: tr
     database = db.db(name)
 
 }).catch(err => console.log("[NB] Error: " + err))
-
-
-
-
-
-
-
