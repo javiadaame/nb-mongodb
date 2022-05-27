@@ -1,4 +1,4 @@
-const database = require('../../main')
+import { database } from '../../main';
 
 /* 
     Create collection in MongoDB database.

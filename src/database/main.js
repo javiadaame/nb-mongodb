@@ -1,4 +1,4 @@
-const database = require('../main.js')
+import { database } from '../../main';
 
 function checkConnection() {
     if (!database) {
