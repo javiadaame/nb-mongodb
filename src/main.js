@@ -4,3 +4,11 @@ const config = require('./config/config.json')
 const url = config.database.url
 const name = config.database.name
 
+let database;
+
+// database connection
+mongodb.MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true },).then((client) => {
+    console.log(`[NB] The connection of ${name} is succesfull.`)
+    database = client.db(name)
+
+}).catch(err => console.log("[NB] Error: " + err))
