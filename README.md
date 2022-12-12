@@ -5,6 +5,6 @@ This is a MongoDB wrapper for the use of FiveM game-scripts.
 </div>
 
 This repository is a basic MongoDB wrapper for use of FiveM resources.
-For see how to use in other resources, see [here](#usage).
+For see how to use in other resources, see [usage](#usage).
 
 ## Usage
